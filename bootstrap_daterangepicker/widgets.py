@@ -85,7 +85,7 @@ class DateRangeWidget(forms.TextInput):
             return self._format_date_value(value[0]) + \
                    self.separator + \
                    self._format_date_value(value[1])
-        elif psycopg2_ranges and isinstance(value, psycopg2_DateTimeRanges):
+        elif psycopg2_DateTimeRanges and isinstance(value, psycopg2_DateTimeRanges):
             return self._format_date_value(value.lower) + \
                    self.separator + \
                    self._format_date_value(value.upper)
